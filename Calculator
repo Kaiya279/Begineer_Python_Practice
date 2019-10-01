@@ -1,0 +1,95 @@
+#Perform calculation operations using Python 
+
+import operator
+from IPython.display import clear_output
+#operators for mathematical operations
+
+
+print("Instruction : Enter 'clr' for new calculation")
+#user first input
+num1 = int(input("Enter the Number "))
+#operator entered by user
+choice =(input("Perform the operation "))
+
+while choice is not operator.eq:
+
+    if choice is '+':
+        if(choice == '+'):
+        
+            #user second input
+            num2 = int(input("Enter the Number "))
+            print("Total = ",operator.add(num1, num2))
+            #operator entered by user
+            choice =(input("Perform the operation "))
+            if (choice == "clr"):
+                clear_output()
+                num1 = int(input("Enter the Number "))
+                choice =(input("Perform the operation"))
+                continue
+            else :
+                #would you like to continue
+                num1 = operator.add(num1, num2)
+                continue
+            continue   
+        
+        else:
+            break
+    elif choice is '-':
+        if(choice == '-'):
+            #user second input
+            num2 = int(input("Enter the Number "))
+            print("Total = ",operator.sub(num1, num2))
+            #operator entered by user
+            choice =(input("Perform the operation "))
+            if (choice == "clr"):
+                clear_output()
+                num1 = int(input("Enter the Number "))
+                choice =(input("Perform the operation "))
+                continue
+            else :
+                #would you like to continue
+                num1 = operator.sub(num1, num2)
+                continue
+        else:
+            break
+    elif choice is '*':
+        if(choice == '*'):
+            #user second input
+            num2 = int(input("Enter the Number "))
+            print("Total = ",operator.mul(num1, num2))
+            #operator entered by user
+            choice =(input("Perform the operation "))
+        
+            if (choice == "clr"):
+                clear_output()
+                num1 = int(input("Enter the Number "))
+                choice =(input(""))
+                continue
+            else :
+                #would you like to continue
+                num1 = operator.mul(num1, num2)
+                continue
+        else:
+            break
+    elif choice is '/':
+        if(choice == '/'):
+            #user second input
+            num2 = int(input("Enter the Number "))
+            print("Total = ",operator.truediv(num1,num2))
+            #operator entered by user
+            choice =(input("Perform the operation "))
+        #would you like to continue
+            if (choice == "clr"):
+                clear_output()
+                num1 = int(input("Enter the Number "))
+                choice =(input("Perform the operation "))
+                continue
+            else :
+                #would you like to continue
+                num1 = operator.truediv(num1,num2)
+                continue
+        else:
+            break
+    else:
+        print("Thanks a lot!")
+        break
