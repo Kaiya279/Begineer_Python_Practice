@@ -1,0 +1,23 @@
+"""OS module in Python provides functions for interacting with the operating system"""
+import os
+
+"""Path of directory from where you want to search your file"""
+
+path =".\⁨Users⁩\⁨tiwaripriya⁩\⁨Downloads⁩\Python"
+files = []
+# r=root, d=directories, f = files
+for r, d, f in os.walk(path):
+    for file in f:
+        if '.csv' in file:
+        
+        """os.path.join() method in Python join one or more path components intelligently. 
+        This method concatenates various path components with exactly one directory separator (‘/’) 
+        following each non-empty part except the last path component. If the last path component to be joined 
+        is empty then a directory seperator (‘/’) is put at the end.
+        If a path component represents an absolute path, then all previous components joined are discarded and
+        joining continues from the absolute path component."""
+        
+            files.append(os.path.join(r, file))
+
+for f in files:
+    print(f)
