@@ -3,6 +3,8 @@
 import random
 
 #global
+
+#Append the List when user guess low or high than the number
 Low_guess= []
 High_guess =[]
 
@@ -29,14 +31,20 @@ def game(Beg,End):
             print("Low Guess")
             count+=1
             r1.left_turns -= 1
+            Low_guess.append(num)
+            
             print("You have {} turns left".format(r1.left_turns))
+            print("Low Guess List",Low_guess)
             continue
             break   
         elif(num > rand_num):
             print("High Guess")
             count+=1
             r1.left_turns -= 1
+            High_guess.append(num)
+            
             print("You have {} turns left".format(r1.left_turns))
+            print("High Guess List",High_guess)
             continue
             
             break
