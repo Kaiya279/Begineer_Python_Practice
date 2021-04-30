@@ -1,0 +1,11 @@
+import os
+path = r"C:\Users\lenovo\Desktop"
+files=[]
+
+for r,d,f in os.walk(path):
+    for file in f:
+        if '.docx' in file :
+            files.append(os.path.join(r,file))
+for f in files:
+    print(f)
+print(f)
